@@ -1,0 +1,29 @@
+name: Workflow Rotina Gamer Estilo n8n
+
+# Gatilho de tempo (Igual ao Cron Trigger do n8n)
+on:
+  schedule:
+    # 14:30 no Horário de Brasília (17:30 UTC) - Segunda e Terça
+    - cron: '30 17 * * 1,2'
+
+jobs:
+  alerta-rotina:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Nó 1 - Iniciar Automação
+      run: echo "Iniciando o nó de monitoramento da rotina!"
+
+    - name: Nó 2 - Alerta de Fim de Jogo
+      run: |
+        echo "🚨 ATENÇÃO! São 14h30!"
+        echo "🎮 Hora de fechar o jogo e clicar em DESLIGAR."
+        echo "🖥️ Deixe a tampa aberta para o notebook esfriar na mesa."
+
+    - name: Nó 3 - Tempo de Espera (Banho e Organização)
+      run: |
+        echo "⏰ Cronômetro de 30 minutos iniciado."
+        echo "🧼 Vá tomar banho e se arrumar enquanto o PC esfria de boa."
+
+    - name: Nó 4 - Status Final
+      run: echo "🎯 15h00! Notebook frio. Pode guardar na caixa e ir para o amigo!"
